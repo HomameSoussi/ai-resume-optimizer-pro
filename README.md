@@ -24,17 +24,24 @@ Experience the power of AI-driven resume optimization: [**Try it now**](https://
 
 ### 🔧 **Technical Excellence**
 - **React + Tailwind**: Modern frontend with professional UI components
-- **OpenAI Integration**: GPT-4.1-mini for advanced resume analysis
+- **Free AI Integration**: Multiple free AI APIs with intelligent fallback system
 - **Flask Backend**: Robust API with comprehensive error handling
 - **PDF Processing**: Reliable text extraction from resume files
+
+## 🆓 **Completely Free to Use**
+
+✅ **No API Keys Required** - Works out of the box  
+✅ **Multiple AI Backends** - Hugging Face, Groq, Together AI, and local analysis  
+✅ **Intelligent Fallback** - Always provides results even if external APIs fail  
+✅ **Zero Cost** - No subscription or usage fees  
 
 ## 🏆 **Competitive Advantages**
 
 ✅ **Live & Functional** - Working application vs competitor waitlists  
 ✅ **Professional Design** - Enterprise-grade UI/UX that builds trust  
-✅ **Real AI Integration** - Actual OpenAI analysis vs marketing promises  
+✅ **Free AI Analysis** - No API costs vs expensive OpenAI requirements  
 ✅ **Complete Experience** - End-to-end optimization workflow  
-✅ **Advanced Features** - Comprehensive scoring and detailed feedback  
+✅ **Always Available** - Local fallback ensures 100% uptime  
 
 ## 🛠️ **Technology Stack**
 
@@ -47,7 +54,8 @@ Experience the power of AI-driven resume optimization: [**Try it now**](https://
 
 ### Backend
 - **Flask** - Python web framework
-- **OpenAI API** - GPT-4.1-mini for AI analysis
+- **Multiple AI APIs** - Hugging Face, Groq, Together AI
+- **Local Analysis** - Intelligent keyword and content analysis
 - **PyPDF2** - PDF text extraction
 - **Flask-CORS** - Cross-origin request handling
 
@@ -56,7 +64,7 @@ Experience the power of AI-driven resume optimization: [**Try it now**](https://
 ### Prerequisites
 - Node.js 18+ 
 - Python 3.9+
-- OpenAI API key
+- **No API keys required!**
 
 ### Installation
 
@@ -79,11 +87,11 @@ cd api
 pip install -r requirements.txt
 ```
 
-4. **Configure environment variables**
+4. **Optional: Add free API keys for enhanced AI analysis**
 ```bash
-# Create .env file in root directory
-OPENAI_API_KEY=your_openai_api_key_here
-OPENAI_API_BASE=https://api.openai.com/v1
+# Create .env file in root directory (optional)
+GROQ_API_KEY=your_free_groq_key_here  # Get free at https://console.groq.com/
+TOGETHER_API_KEY=your_free_together_key_here  # Get free at https://api.together.xyz/
 ```
 
 ### Development
@@ -109,23 +117,29 @@ Navigate to `http://localhost:5173`
 1. **Deploy to Vercel**
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/HomameSoussi/ai-resume-optimizer-pro)
 
-2. **Set environment variables in Vercel dashboard**
-- `OPENAI_API_KEY`: Your OpenAI API key
-- `OPENAI_API_BASE`: `https://api.openai.com/v1`
+2. **Optional: Set environment variables for enhanced AI**
+- `GROQ_API_KEY`: Your free Groq API key (optional)
+- `TOGETHER_API_KEY`: Your free Together AI key (optional)
 
 3. **Deploy automatically**
 Vercel will build and deploy your application automatically.
 
-### Manual Deployment
+**Note**: The application works perfectly without any API keys using the built-in local analysis engine!
 
-1. **Build the frontend**
-```bash
-npm run build
-```
+## 🤖 **AI Analysis System**
 
-2. **Deploy to your preferred platform**
-- Frontend: Deploy `dist/` folder to any static hosting
-- Backend: Deploy `api/` folder to Python hosting service
+### Multi-Tier AI Architecture
+1. **Hugging Face Inference API** - Free tier for text analysis
+2. **Groq API** - Free tier with Llama models (optional)
+3. **Together AI** - Free tier with open-source models (optional)
+4. **Local Analysis Engine** - Always available fallback with intelligent algorithms
+
+### Local Analysis Features
+- **Keyword Extraction**: Identifies relevant terms from job descriptions
+- **Skills Matching**: Compares resume skills with job requirements
+- **Experience Analysis**: Evaluates work experience relevance
+- **ATS Compatibility**: Checks resume structure and formatting
+- **Content Optimization**: Generates improved summaries and suggestions
 
 ## 📊 **API Endpoints**
 
@@ -183,7 +197,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 **Acknowledgments**
 
-- **OpenAI** for providing advanced AI capabilities
+- **Hugging Face** for providing free AI inference APIs
+- **Groq** for fast and free Llama model access
+- **Together AI** for open-source model hosting
 - **Vercel** for seamless deployment platform
 - **React & Tailwind** communities for excellent tools
 - **shadcn/ui** for beautiful component library
@@ -198,5 +214,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ by the AI Resume Optimizer Pro Team**
 
-*Transform your resume with the power of AI and land your dream job!*
+*Transform your resume with the power of free AI and land your dream job!*
 
