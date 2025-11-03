@@ -1,13 +1,22 @@
 import os
 import sys
-# DON'T CHANGE THIS !!!
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
+# Add the api directory to the path for Vercel serverless
+sys.path.insert(0, os.path.dirname(__file__))
 
 from flask import Flask, send_from_directory
 from flask_cors import CORS
-from models.user import db
-from routes.user import user_bp
-from routes.resume import resume_bp
+
+# Use absolute imports with api prefix
+try:
+    from api.models.user import db
+    from api.routes.user import user_bp
+    from api.routes.resume import resume_bp
+except ImportError:
+    # Fallback for local development
+    from models.user import db
+    from routes.user import user_bp
+    from routes.resume import resume_bp
 
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(__file__), 'static'))
 app.config['SECRET_KEY'] = 'asdf#FGSgvasgf$5$WGT'

@@ -1,5 +1,10 @@
 from flask import Blueprint, jsonify, request
-from models.user import User, db
+
+# Use absolute imports with api prefix for Vercel
+try:
+    from api.models.user import User, db
+except ImportError:
+    from models.user import User, db
 
 user_bp = Blueprint('user', __name__)
 
